@@ -23,9 +23,9 @@ const biglog = (socket, msg, color) =>{
 };
 
 //pintar mensajes de error
-const errorlog = (emsg) =>{
+const errorlog = (socket, emsg) =>{
 
-	socket.write(`${colorize("Error", "red")}: ${colorize(colorize(emsg, "red"), "bgYellowBright")}\n`);
+	socket.write(`${colorize("Error", "red")}: ${colorize(colorize(emsg, "red"), "bgYellowBright")}\r\n`);
 };
 
 exports = module.exports = {
