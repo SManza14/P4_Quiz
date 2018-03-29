@@ -12,7 +12,7 @@ net.createServer(socket => {
   console.log("Se ha conectado un cliente desde " + socket.remoteAddress)
 
 // Mensaje inicial
-biglog(socket, 'CORE Quiz', 'green');
+log(socket, 'CORE Quiz', 'green');
 
 const rl = readline.createInterface({
   input: socket,
@@ -95,7 +95,7 @@ rl
 })
 .on('close', () => {
   log(socket, 'Adios!');
-  process.exit(0);
+ // process.exit(0);
 });
 
 })

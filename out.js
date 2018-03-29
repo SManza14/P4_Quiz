@@ -13,13 +13,13 @@ const colorize = (msg, color) =>{
 //Pintar por pantalla
 const log = (socket, msg, color) =>{
 
-	socket.write(colorize(msg, color + "\n"));
+	socket.write(colorize(msg, color)+ "\r\n");
 };
 
 //Pintar por pantalla utilizando figlet
 const biglog = (socket, msg, color) =>{
 
-	log(socket, figlet.textSync(msg, { horizontalLayout: 'full'}), color);
+	log(socket, figlet.textSync(msg, { horizontalLayout: 'full'}) + "\r\n", color);
 };
 
 //pintar mensajes de error
